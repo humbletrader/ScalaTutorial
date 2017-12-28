@@ -60,6 +60,8 @@ def yetAnotherFunction(vars : Int*) : Unit = {
   vars.foreach(println)
 }
 
+//TODO: function vs. method
+
 
 
 
