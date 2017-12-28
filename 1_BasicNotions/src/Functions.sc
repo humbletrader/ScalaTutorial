@@ -16,8 +16,9 @@ makeComputation
 def thisIsNotAFunction = 2+3
 thisIsNotAFunction.getClass
 
-
-//anonymous function
+//////////////////////////////////
+// ANONYMOUS FUNCTIONS
+//////////////////////////////////
 (x: Int) => x + 7
 
 //anonymous function spanning multiple lines
@@ -29,5 +30,39 @@ thisIsNotAFunction.getClass
 // save an anonymous function into a val
 val thisIsAFunction = (i:Int) => i * 2
 thisIsAFunction.getClass
+
+//////////////////////////////////
+//PARTIAL APPLICATION
+//////////////////////////////////
+def addTwoNumbers(a: Int, b: Int) : Int = a + b
+val addSeven = addTwoNumbers(7, _:Int)
+addSeven(8)
+
+//////////////////////////////////
+//CURRIED FUNCTIONS
+//////////////////////////////////
+
+//curry an existing function
+def multiply(a: Int, b: Int) : Int = a * b
+val curriedMultiply = (multiply _).curried
+val timesTwo = curriedMultiply(2)
+timesTwo(3)
+
+//define a curried function ( no need to curry it afterwards)
+def alreadyCurriedMultiply(a: Int)(b: Int) : Int = a * b
+val timesThree = alreadyCurriedMultiply(3) _
+timesThree(7)
+
+//////////////////////////////////
+// VARIABLE LENGTH ARGS
+//////////////////////////////////
+def yetAnotherFunction(vars : Int*) : Unit = {
+  vars.foreach(println)
+}
+
+
+
+
+
 
 
