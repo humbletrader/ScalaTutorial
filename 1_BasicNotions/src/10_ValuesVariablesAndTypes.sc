@@ -1,11 +1,21 @@
-//immutable value definition
+///////////////////////////////////////////
+// IMMUTABLE VALUE DEFINITION
+//////////////////////////////////////////
+val one: Int = 1
+
+//////////////////////////////////////////
+//  MUTABLE VALUE DEFINITION
+//////////////////////////////////////////
+var mutableOne : Int = 1
+
+//immutable value definition having the type inferred from the right hand side
 val two =  1+1
 
 //error below (re-assingnment to val)
 //two = 3
 
 
-var three = 1+2
+var three = 1+2 //type inferred from right
 //re-assignment to var is fine
 three = 4
 
