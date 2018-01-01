@@ -60,8 +60,24 @@ def yetAnotherFunction(vars : Int*) : Unit = {
   vars.foreach(println)
 }
 
-//TODO: function vs. method
+///////////////////////////////////
+// functions are objects
+///////////////////////////////////
+object add extends Function2[Int, Int, Int] {
+  def apply(nbr1: Int, nbr2: Int): Int = {
+    nbr1+nbr2
+  }
+}
 
+add(2,3)
+
+///////////////////////////////////////
+// A nice short-hand for extends Function1[Int, Int] is extends (Int => Int)
+///////////////////////////////////////
+
+class AddOne extends (Int => Int) {
+  def apply(m: Int): Int = m + 1
+}
 
 
 

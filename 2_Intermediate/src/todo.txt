@@ -1,0 +1,2 @@
+//common code in package objects
+//function vs. method
