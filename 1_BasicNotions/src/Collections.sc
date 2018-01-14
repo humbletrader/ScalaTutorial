@@ -13,7 +13,6 @@ alphabet(3) //prints D
 //Sets do not preserve order and have no duplicates and are immutable
 val myPets = Set("cat", "dog", "mouse")
 
-
 //map initialization
 val sampleMap = Map(1 -> "one", 2 -> "two", 3 -> "three")
 sampleMap.filter( pair => pair._1 < 3) //ugly way of filtering/mapping a map

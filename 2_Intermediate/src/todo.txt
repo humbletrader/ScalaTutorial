@@ -1,2 +1,8 @@
 //common code in package objects
 //function vs. method
+
+//partial functions
+
+//case as a partial function
+
+//function composition
