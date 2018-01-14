@@ -23,5 +23,5 @@ sampleMap.filter {case (int, str) => int < 3} //even more simple without the par
 val input = Array( (1, Array("a", "b")), (2, Array("c", "d", "e")))
 input.flatMap(pair => pair._2.map(s => (pair._1,s)))
 
-//COMMON COLLECITON METHODS
-//filter, map, zip, flatten, flatMap
+//COMMON COLLECTION METHODS
+//filter, map, zip, flatten, flatMap, partition
