@@ -15,6 +15,8 @@ val myPets = Set("cat", "dog", "mouse")
 
 //map initialization
 val sampleMap = Map(1 -> "one", 2 -> "two", 3 -> "three")
+val sampleMap2 = Map( (1, "one"), (2, "two"), (3, "three")) //same as above
+
 sampleMap.filter( pair => pair._1 < 3) //ugly way of filtering/mapping a map
 sampleMap.filter({case (int, str) => int < 3}) //nicer way of doing the same thing
 sampleMap.filter {case (int, str) => int < 3} //even more simple without the parenthesis
