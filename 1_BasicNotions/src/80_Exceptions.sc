@@ -9,9 +9,9 @@ try{
 }
 
 //remember that everything in scala is an expression
-//so try can return a values
+//so try can return a value
 val caca = try { potentialNumber.toInt }
-           catch{ case _ => 0}
+           catch{ case _ => 0 }
            finally { println("the finally block does not participate in forming the returned value")}
 
 ////////////////////////////////////////
