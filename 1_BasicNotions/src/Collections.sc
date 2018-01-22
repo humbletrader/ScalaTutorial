@@ -9,6 +9,7 @@ println(arraySample(4))//prints 10
 val alphabet = List("A", "B", "C", "D")
 alphabet(3) //prints D
 //alphabet(3) = "E" //error
+2::1::3::Nil // another way of adding values to a list
 
 //Sets do not preserve order and have no duplicates and are immutable
 val myPets = Set("cat", "dog", "mouse")
