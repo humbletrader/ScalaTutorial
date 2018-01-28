@@ -7,11 +7,20 @@ tupleExample._1
 tupleExample._2
 
 //another way of writing a tuple
+val secondTuple = 2.->("b")
+
+//or, the more readable way
 val secondTupleExample = 2 -> "b"
 secondTupleExample._1
 
-val tupleWithThreeElements = (1, "one", "uno")
-tupleWithThreeElements._1
-tupleWithThreeElements._2
+//deconstruction using tuples
+val people = Vector(("John Doe", 34), ("Jeanny Doe", 35), ("their child", 10))
+val (minors, adults) = people.partition(person => person._2 < 18)
+minors // a Vector with one element
+adults // a Vector with two person elements
 
-val tupleWithThree = 2 -> ("two" -> "due")
+
+val tupleOfThree = Tuple3(1, "one", "ein")
+val anotherTupleOfThree = (2, "two", "zwei")
+tupleOfThree._1
+tupleOfThree._2
