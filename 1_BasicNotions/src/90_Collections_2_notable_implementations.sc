@@ -9,18 +9,24 @@ alphabet(3) //prints D
 
 //linked lists
 
+//streams
+//a stream is a list whose elements are computed lazily
+//because of the lazyness, a stream can be infinite
+val stream = Stream(1, 2, 3) // in the console this prints Stream (1, ?)
+val stream2 = 1 #:: 2 #:: 3 #:: Stream.empty // the same as above
 
+//vectors
 
 //ranges
 val rangeExample = Range(1,5)
 val secondRange =  1 to 5
 
 
-//streams
+//buffers
 
-
-//buffers ( the lists in java )
 
 //stacks and queues
+
+
 //priority queue
 
