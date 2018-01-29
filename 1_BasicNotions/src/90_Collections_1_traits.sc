@@ -10,7 +10,7 @@
 //     |      |      |
 //    Seq    Set     Map
 //
-// Seq ( a sequence of elements )
+// Seq ( an ordered sequence of elements )
 // Set ( a set of un-ordered elements )
 // Map ( a map of key-value pairs)
 //
@@ -24,13 +24,22 @@ val traversable = Traversable(1, 2, 3, 4, 5) //you will get a List ( default imp
 //important methods in traversables
 traversable.head //1
 traversable.tail //Traversable(2,3,4,5)
+
 traversable.map{ nbr => nbr * 2}
 traversable.partition(nbr => nbr % 2 == 0) //splits a traversable into two halves ( a tuple )
 traversable.find(nbr => nbr % 2 == 0) //finds first
 traversable.groupBy(nbr => nbr % 3) //creates a map with keys (0,1,2)
+
 traversable.++(Traversable(6, 7, 8, 9)) // 1, 2, 3, .... 8, 9
 traversable ++ Traversable(6, 7, 8, 9)
 traversable.++:(Traversable(6, 7, 8, 9))  //6, 7, 8, 9, 1, 2, 3, 4, 5
+
+traversable.reduceLeft((acc, elem) => acc + elem)   //
+traversable.foldLeft(10)((acc, elem) => acc + elem) //the same as reduce but starting with 10
+traversable./:(10)((acc, elem) => acc + elem)       //shortcut for fold left
+traversable.scanLeft(10)((acc, elem) => acc + elem) // returns a list of intermediary results 10, 11, 13, 16, 20, 25
+
+Traversable(Traversable(1,2), Traversable(3, 4, 5)).flatten
 //important sub-traits : Iterable
 //important concrete implementations: none
 
@@ -83,7 +92,7 @@ sequence.reverse
 
 // notable sub-traits : IndexedSeq and LinearSeq
 //LinearSeq : optimized for head and tail operations
-//IndexedSeq: oprimized for apply, lenght, update
+//IndexedSeq: optimized for apply, length, update
 
 //important concrete implementations:
 // List, Stream : implementations for LinearSeq
@@ -110,7 +119,7 @@ myPets + ("bear", "deer") //adding the elements of a tuple
 //////////////////////////////////////////////////////////////////////////////////////////
 val sampleMap = Map(1 -> "one", 2 -> "two", 3 -> "three")
 val sampleMap2 = Map( (1, "one"), (2, "two"), (3, "three")) //same as above
-
+//important methods:
 sampleMap.filter( pair => pair._1 < 3) //ugly way of filtering/mapping a map
 sampleMap.filter({case (int, str) => int < 3}) //nicer way of doing the same thing
 sampleMap.filter {case (int, str) => int < 3} //even more simple without the parenthesis
@@ -136,10 +145,9 @@ List(1,2,3).zip(List("a", "b", "c")) // returns a list of tuples List((1,"a"), (
 List(List(1,2), List(3, 4, 5)).flatten // List(1,2,3,4,5)
 
 //////////////////////////////////////////////////////////////////////////////////////////
-//                      VIEW METHODS                                                    //
+//                       METHODS CONVERT FROM ONE COLLECTION TO ANOTHER                 //
 //////////////////////////////////////////////////////////////////////////////////////////
 
-//transforming one collection into another (view methods)
 //toArray
 //toBuffer
 //toIndexedSeq
