@@ -98,6 +98,10 @@ sequence.reverse
 // List, Stream : implementations for LinearSeq
 // Array, ArrayBuffer, Vector: implementation for IndexedSeq
 
+//Seq implements PartialFunction[Int, A] so you can easily write
+sequence(3)
+//sequence(100) //IndexOutOfBounds
+
 
 //////////////////////////////////////////////////////////////////////////////////////////
 //                            Sets
@@ -106,7 +110,7 @@ sequence.reverse
 val myPets = Set("cat", "dog", "mouse")
 // important methods
 myPets.contains("cat") //true
-myPets("cat") //returns true ( because Set.apply = Set.contains )
+myPets("cat") //returns true ( because Set extends Function1 A => Boolean)
 myPets + "bear"
 myPets ++ (Set("bear", "deer", "monkey"))
 myPets + ("bear", "deer") //adding the elements of a tuple
@@ -145,7 +149,7 @@ List(1,2,3).zip(List("a", "b", "c")) // returns a list of tuples List((1,"a"), (
 List(List(1,2), List(3, 4, 5)).flatten // List(1,2,3,4,5)
 
 //////////////////////////////////////////////////////////////////////////////////////////
-//                       METHODS CONVERT FROM ONE COLLECTION TO ANOTHER                 //
+//                       CONVERT FROM ONE COLLECTION TO ANOTHER                 //
 //////////////////////////////////////////////////////////////////////////////////////////
 
 //toArray
@@ -163,7 +167,7 @@ List(List(1,2), List(3, 4, 5)).flatten // List(1,2,3,4,5)
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
-//                       CODE SAMPLES WITH COLLECTION                                   //
+//                       CODE SAMPLES WITH COLLECTIONS                                   //
 //////////////////////////////////////////////////////////////////////////////////////////
 
 //flatten an array of tuples
