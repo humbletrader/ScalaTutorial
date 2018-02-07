@@ -13,7 +13,7 @@ val secondTuple = 2.->("b")
 val secondTupleExample = 2 -> "b"
 secondTupleExample._1
 
-//deconstruction using tuples
+//object decomposition using tuples
 val people = Vector(("John Doe", 34), ("Jeanny Doe", 35), ("their child", 10))
 val (minors, adults) = people.partition(person => person._2 < 18)
 minors // a Vector with one element
@@ -24,3 +24,11 @@ val tupleOfThree = Tuple3(1, "one", "ein")
 val anotherTupleOfThree = (2, "two", "zwei")
 tupleOfThree._1
 tupleOfThree._2
+
+//what happens when decomposition does not work
+def fnc(potentialTuple: Any) = {
+  val (key, value) = potentialTuple
+  println(s"the key is ${key}")
+}
+
+fnc(1) //MatchError

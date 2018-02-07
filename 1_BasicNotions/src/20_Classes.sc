@@ -37,7 +37,7 @@ anotherCalc.chipMaker
 
 
 
-//please note the val below ( which makes the brand available as an instance value)
+//please note the val below (which makes the brand available as an instance value)
 class ComputerWithBrand( val brand: String) {
 
 }
