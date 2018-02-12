@@ -72,3 +72,13 @@ class PersonWithDefaults( firstName: String = "Unknown", lastName: String = "Unk
 
 //constructors with default encourage the named parameters
 val me = new PersonWithDefaults(lastName = "Dragos")
+
+///////////////////////////////////////////////////////////////
+//                  inheritance
+///////////////////////////////////////////////////////////////
+class Animal (val name: String, val legCount:Int) {}
+
+class Cat (name: String) extends Animal(name, legCount = 4) {}
+
+val myCat = new Cat("Sisi")
+println(myCat.legCount)

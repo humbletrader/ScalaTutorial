@@ -22,3 +22,13 @@ person match {
   case Person(name, relation) => s"Person $name is in $relation to you"
   case _ => "unknown object"
 }
+
+///////////////////////////////////////////////////////////////
+//                  inheritance
+///////////////////////////////////////////////////////////////
+case class Animal (name: String, legCount:Int) {}
+
+case class Cat (name: String) extends Animal(name, legCount = 4) {}
+
+val myCat = new Cat("Sisi")
+println(myCat.legCount)

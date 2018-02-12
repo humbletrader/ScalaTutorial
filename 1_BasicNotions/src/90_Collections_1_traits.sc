@@ -148,6 +148,9 @@ numbers.partition( _ %2 == 0) //returns a tuple with two lists (List(2,4,6), Lis
 List(1,2,3).zip(List("a", "b", "c")) // returns a list of tuples List((1,"a"), (2, "b"), (3, "c"))
 List(List(1,2), List(3, 4, 5)).flatten // List(1,2,3,4,5)
 
+List.tabulate(5){ idx => idx}
+
+
 //////////////////////////////////////////////////////////////////////////////////////////
 //                       CONVERT FROM ONE COLLECTION TO ANOTHER                 //
 //////////////////////////////////////////////////////////////////////////////////////////
