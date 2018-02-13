@@ -1,5 +1,5 @@
 class Calculator {
-  val brand = "DELL"
+  val brand = "DELL" //public by default
   def compute(a: Int, b: Int) = a+b
 }
 

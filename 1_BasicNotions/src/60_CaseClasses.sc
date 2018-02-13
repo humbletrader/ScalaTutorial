@@ -29,5 +29,3 @@ person match {
 case class Animal ()
 
 case class Cat (name: String) extends Animal //error: case-to-case inheritance prohibited
-
-val myCat = new Cat("Sisi")
