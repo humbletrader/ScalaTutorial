@@ -26,9 +26,8 @@ person match {
 ///////////////////////////////////////////////////////////////
 //                  inheritance
 ///////////////////////////////////////////////////////////////
-case class Animal (name: String, legCount:Int) {}
+case class Animal ()
 
-case class Cat (name: String) extends Animal(name, legCount = 4) {}
+case class Cat (name: String) extends Animal //error: case-to-case inheritance prohibited
 
 val myCat = new Cat("Sisi")
-println(myCat.legCount)
