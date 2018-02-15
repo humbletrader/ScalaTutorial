@@ -178,3 +178,9 @@ val input = Array( (1, Array("a", "b")), (2, Array("c", "d", "e")))
 input.flatMap(pair => pair._2.map(s => (pair._1,s)))
 input.flatMap{ case (nbr, arr) => arr.map(letter => nbr -> letter)} //same as above only more explicit
 
+println(
+Vector(2,3,4) match {
+  case Vector() => "empty"
+  case Vector(blah) => "has values"
+}
+)
