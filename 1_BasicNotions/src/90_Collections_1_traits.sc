@@ -134,6 +134,10 @@ sampleMap.get(3) match {
   case Some(n) => println(s"consuming $n")
   case None => println(" the number does not exist in the map")
 }
+sampleMap(1)//returns "one" ( not an option )
+//sampleMap(5)//throws NoSuchElementException
+
+for ((key, value) <- sampleMap) println(s"key=$key, value=$value")
 
 //important sub-traits
 //important concrete implementations: HashMap
