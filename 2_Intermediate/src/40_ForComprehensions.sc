@@ -74,6 +74,9 @@ for{
   (firstName, lastName)
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////
+//                    Monads don't compose
+////////////////////////////////////////////////////////////////////////////////////////////
 
 val namesDatabase = Map (
   "John" -> Some("Doe"),
@@ -82,8 +85,8 @@ val namesDatabase = Map (
 )
 
 for{
-  firstName <- namesDatabase.keys
-  lastName <- namesDatabase(firstName)
+  firstName <- List("John", "Tarzan", "Jane")
+  lastName <- namesDatabase(firstName) //this one returns an Option but it compiles because it is on the last position
 } yield{
   (firstName, lastName) //returns a (John,Doe), (Jane, Doe) set
 }
@@ -92,3 +95,13 @@ namesDatabase.keys.flatMap(firstName =>
   namesDatabase(firstName).map( lastName =>
     (firstName, lastName)
   ))
+
+// almost the save for comprehension but the lastName is not the last in the for expression ( so it should support a flatMap)
+for{
+  firstName <- List("John", "Tarzan", "Jane")
+  lastName <- namesDatabase(firstName)// compilation error ( type mismatch )  - you can forcefully make it a List in order to compile
+  //lastName <- List(namesDatabase(firstName).getOrElse("Unknown"))  // solution for the issue above (compilation erro)
+  suffix <- List("jr", "sr")
+}yield {
+  (firstName, lastName, suffix)
+}
