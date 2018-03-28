@@ -152,7 +152,19 @@ numbers.partition( _ %2 == 0) //returns a tuple with two lists (List(2,4,6), Lis
 List(1,2,3).zip(List("a", "b", "c")) // returns a list of tuples List((1,"a"), (2, "b"), (3, "c"))
 List(List(1,2), List(3, 4, 5)).flatten // List(1,2,3,4,5)
 
-List.tabulate(5){ idx => idx}
+List.tabulate(5){ idx => idx+100} //creates a list with 5 elements (100, 101, 102, 103, 104)
+
+
+List(1,2, 3, 4, 5).reduceLeft((acc, value) => acc + value)
+List(1, 2, 3, 4, 5).foldLeft("zero")((strAccum: String, value: Int) => strAccum + value)
+List("alpha", "beta", "gamma", "delta").aggregate(0)(
+  (intAcc: Int, strVal: String) => intAcc + strVal.length, //<- this is seq-op
+  (intAcc:Int, intVal: Int) => intAcc + intVal             // <- this is comb-op
+)
+
+//seq operation applies to the first values
+// comb operation applies to the results obtained in the first round
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -177,14 +189,23 @@ List.tabulate(5){ idx => idx}
 //                       CODE SAMPLES WITH COLLECTIONS                                   //
 //////////////////////////////////////////////////////////////////////////////////////////
 
+//SAMPLE 1
+
 //flatten an array of tuples
 val input = Array( (1, Array("a", "b")), (2, Array("c", "d", "e")))
 input.flatMap(pair => pair._2.map(s => (pair._1,s)))
 input.flatMap{ case (nbr, arr) => arr.map(letter => nbr -> letter)} //same as above only more explicit
 
-println(
-Vector(2,3,4) match {
-  case Vector() => "empty"
-  case Vector(blah) => "has values"
+//aame as above using a for comprehension ( see for comprehensions)
+for{
+  pair <- input
+  first = pair._1
+  second <- pair._2
+}yield{
+  (first, second)
 }
-)
+
+
+//SAMPlE 2
+val lettersAndNamesIter = Iterator( "a" -> "alan", "b" -> "bush", "a" -> "alice", "c" -> "chriss")
+lettersAndNamesIter.toMap //losses the second value for a
