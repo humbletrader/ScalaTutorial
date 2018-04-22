@@ -3,7 +3,3 @@
 //function vs. method
 
 //function composition
-
-// variance (co-, contra-, in-variance)
-
-//bounds

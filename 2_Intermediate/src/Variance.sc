@@ -1,13 +1,18 @@
+//Variance: how parameterized types behave under subtyping
 // covariance:
 // A <: B -> T(A) <: T(B)
+//Example
+//Integer <: Number
+//Option[Integer] <: Option[Number]  (check the implementation of Option[+A]
 //
 // Example:
+// bad implementation of java arrays
 // Integer <: Number -> Integer[] < Number[]
 // Integer i = Integer.valueOf(10)
 // Number n = int
 // Integer[] intArray = new Integer[]{1,2,3}
 // Number[] nbrArray = intArray
-
+//
 //
 // contra-variance:
 // A <:B -> T(B) <: T(A)
@@ -15,6 +20,9 @@
 //
 // invariance:
 // A <: B ->  no relation between T(A) and T(B)
+
+
+
 // Integer i = Integer.valueOf(10)
 // Number nbr = i
 // List<Integer> listOfInt = Array.asList(1,2,3)
