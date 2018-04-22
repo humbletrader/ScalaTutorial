@@ -75,7 +75,7 @@ for{
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////
-//                    Monads don't compose
+//                    Monads don't compose well
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 val namesDatabase = Map (
@@ -91,6 +91,7 @@ for{
   (firstName, lastName) //returns a (John,Doe), (Jane, Doe) set
 }
 
+//the equivalent of the for-comprehension above with flatMap/map
 namesDatabase.keys.flatMap(firstName =>
   namesDatabase(firstName).map( lastName =>
     (firstName, lastName)
@@ -99,9 +100,35 @@ namesDatabase.keys.flatMap(firstName =>
 // almost the save for comprehension but the lastName is not the last in the for expression ( so it should support a flatMap)
 for{
   firstName <- List("John", "Tarzan", "Jane")
-  lastName <- namesDatabase(firstName)// compilation error ( type mismatch )  - you can forcefully make it a List in order to compile
-  //lastName <- List(namesDatabase(firstName).getOrElse("Unknown"))  // solution for the issue above (compilation erro)
+  //lastName <- namesDatabase(firstName)// this returns an Option-monad but throws a compilation error ( type mismatch )
+  //so in order to bypass it you should forcefully make it a List ( not exactly elegant)
+  lastName <- List(namesDatabase(firstName).getOrElse("Unknown"))  // solution for the issue above (compilation erro)
   suffix <- List("jr", "sr")
 }yield {
   (firstName, lastName, suffix)
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//                       CODE SAMPLES WITH FLAT MAP VS FOR-COMPREHENSIONS              //
+//////////////////////////////////////////////////////////////////////////////////////////
+
+//flatten an array of tuples
+val input = Array( (1, Array("a", "b")), (2, Array("c", "d", "e")))
+input.flatMap(pair =>
+  pair._2.map(s => (pair._1,s))
+)
+
+//same as above but using partial functions
+input.flatMap{
+  case (nbr, arr) => arr.map(letter => nbr -> letter)
+}
+
+//same as above using a for comprehension
+for{
+  pair <- input
+  first = pair._1
+  second <- pair._2
+}yield{
+  (first, second)
 }
