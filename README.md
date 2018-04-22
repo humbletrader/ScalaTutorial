@@ -7,5 +7,6 @@ Sources Used in this project :
 
 Useful links: 
 * [Conversions between Java and Scala collections](http://docs.scala-lang.org/overviews/collections/conversions-between-java-and-scala-collections.html)
+* [Stream vs. View vs. Iterator](http://docs.scala-lang.org/tutorials/FAQ/stream-view-iterator.html)
  
 
