@@ -1,5 +1,4 @@
 # LearnScala
-=======
 
 
 Sources Used in this project : 
@@ -7,7 +6,7 @@ Sources Used in this project :
 * [Guide to Scala Collections](http://docs.scala-lang.org/overviews/collections/introduction.html)
 * [Collections tips and tricks](https://pavelfatin.com/scala-collections-tips-and-tricks)
 * [Design Patterns](https://pavelfatin.com/design-patterns-in-scala/)
-* [Effective scala] (https://youtu.be/TNSe0QzLx4E )
+* [Effective scala](https://youtu.be/TNSe0QzLx4E)
 
 
 Useful links: 
