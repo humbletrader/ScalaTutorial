@@ -1,7 +1,7 @@
 // A partial function is a subclass of Function1
 // it only covers partially the domain of objects
 val partialFunction = new PartialFunction[Int, String]{
-  def apply(i: Int): String ={
+  def apply(i: Int): String = {
     return "one"
   }
 
