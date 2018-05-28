@@ -2,6 +2,10 @@
 //                      COMMON COLLECTION METHODS                                       //
 //////////////////////////////////////////////////////////////////////////////////////////
 
+//map
+Vector(1,3,5).map(i => i*2) //returns Vector[2,6,10]
+Vector(1,3,5).map[Double, Seq[Double]](_ * 2)// Vector(2.0, 6.0, 10.0)
+
 //partition
 List(1, 2, 3, 4, 5, 6, 7, 8, 9).partition( _ %2 == 0) //returns a tuple with two lists (List(2,4,6), List(1,3,5,7.9))
 

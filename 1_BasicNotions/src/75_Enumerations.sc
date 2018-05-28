@@ -3,7 +3,7 @@ object Weekdays extends Enumeration {
   val Mon, Tue, Wed, Thu, Fri, Sat, Sun = Value
 }
 
-//a better approach ( but generating much more code in the background)
+//a better approach (but generating much more code in the background)
 sealed trait WeekDay
 case object Mon
 case object Tue

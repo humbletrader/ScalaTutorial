@@ -10,7 +10,7 @@ val viewWithTransformations = viewOfAList.map(_*2).map(_+1) //still a SeqView
 val backToList = viewWithTransformations.force
 
 //use cases for views
-//use case 1 ( lazy evalueation)
+//use case 1 (lazy evaluation)
 (0 to 9999).view.find(_.toHexString.startsWith("a"))
 //this is much faster than
 (0 to 9999).find(_.toHexString.startsWith("a"))
@@ -19,13 +19,13 @@ val backToList = viewWithTransformations.force
 //providing views into arrays (reference objects)
 val originalArray = (0 to 9).toArray
 val partialViewIntoArray = originalArray.view.slice(2,5)
-def add100( xs: collection.mutable.Seq[Int]) =
-  for(i <- 0 until xs.length)
+
+def add100( xs: collection.mutable.Seq[Int]): Unit =
+  for(i <- xs.indices)
     xs(i) = xs(i) + 100
 
 add100(partialViewIntoArray)
 
 println(originalArray.mkString(",")) //0,1,102,103,104,5,6,7,8,9
-
 
 

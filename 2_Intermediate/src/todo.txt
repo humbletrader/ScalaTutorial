@@ -3,3 +3,5 @@
 //function vs. method
 
 //function composition
+
+//structural types (duck typing)
