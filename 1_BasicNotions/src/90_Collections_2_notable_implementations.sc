@@ -16,16 +16,6 @@ List(5,6,7) match {
   case head :: tail => "zero head but full"
 }
 
-//linked lists
-
-////////////////////////////////////////////////////
-//                streams
-////////////////////////////////////////////////////
-//a stream is a list whose elements are computed lazily
-//because of the laziness, a stream can be infinite
-val stream = Stream(1, 2, 3) // in the console this prints Stream (1, ?)
-val stream2 = 1 #:: 2 #:: 3 #:: Stream.empty // the same as above
-
 ////////////////////////////////////////////////////
 //                 vectors
 ////////////////////////////////////////////////////
@@ -42,7 +32,7 @@ Vector(7, 8, 9) ++: vector  //prepend multiple elements
 // meaning that the method comes from the variable on the right side of the expression. Therefore, in these examples, the methods
 // actually come from the variable a on the far right side of the expression
 
-//pattern matching with Vectors
+//pattern matching with Vectors (works with any other Seq )
 Vector(5,6,7) match {
   case Seq() => "empty"
   case head +: tail if head > 0 => "has a non-zero head"
@@ -53,9 +43,17 @@ Vector(5,6,7) match {
 //                     ranges
 ////////////////////////////////////////////////////
 val rangeExample = Range(1,5)
+val inclusiveRange =  1 to 5 //Range(1,2,3,4,5)
+val exclusiveRange = 1 until 5 //Range(1,2,3,4)
 
+////////////////////////////////////////////////////
+//                streams
+////////////////////////////////////////////////////
+//a stream is a list whose elements are computed lazily
+//because of the laziness, a stream can be infinite
+val stream = Stream(1, 2, 3) // in the console this prints Stream (1, ?)
+val stream2 = 1 #:: 2 #:: 3 #:: Stream.empty // the same as above
 
-val secondRange =  1 to 5
 
 
 ////////////////////////////////////////////////////

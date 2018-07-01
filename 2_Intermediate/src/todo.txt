@@ -4,4 +4,39 @@
 
 //function composition
 
-//structural types (duck typing)
+//structural types (duck typing), existential types
+
+//more on variance :
+//          contravariance example,
+//          why immutable -> covariant and mutable -> invariant
+//          type bounds vs. variance ( they're unrelated issues)
+
+//patterns : stackable traits, type class, evidence class, cake pattern
+
+//collections:
+//    Builder, CanBuildFrom, LikeXXX
+//    BigO reference for common methods in commona implementations
+
+//value types
+
+//case classes : unapply && unapplySeq
+
+//uniform access principle
+
+//implicit vs. implicitly
+
+//view bounds
+
+//context bounds
+
+//abstract types
+
+//abstract types vs. parameterized types (generics)
+
+//self type annotations
+
+//override required and non-required
+
+//traits can extend objects
+
+//infix types
