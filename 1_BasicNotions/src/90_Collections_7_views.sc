@@ -7,7 +7,7 @@ val viewOfAList = List(0,1,2,3,4,5).view //SeqView
 
 val viewWithTransformations = viewOfAList.map(_*2).map(_+1) //still a SeqView
 
-val backToList = viewWithTransformations.force
+val backToList = viewWithTransformations.force //Seq
 
 //use cases for views
 //use case 1 (lazy evaluation)

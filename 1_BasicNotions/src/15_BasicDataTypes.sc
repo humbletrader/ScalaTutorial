@@ -39,3 +39,14 @@ val any: Any = 234
 
 //AnyRef is the supertype of any reference type
 val anyRef: AnyRef = "abc"
+
+val anyVal: AnyVal = 1
+
+//the type hierarchy in scala :
+//                    Any
+//        AnyVal                          AnyRef
+//   Byte Short Int Long Double Float
+//
+//
+
+

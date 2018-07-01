@@ -24,3 +24,5 @@ Vector(1,2,3).toList
 //we can write
 Vector(1,2,3) toList //called also postfix notation
 
+//see the recommendations from scala
+//https://docs.scala-lang.org/style/method-invocation.html
