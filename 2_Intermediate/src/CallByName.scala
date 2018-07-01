@@ -1,4 +1,4 @@
-object ByNameParameters {
+object CallByName {
   //call by name vs. call by value for parameters
   val assertsEnabled = false
 
@@ -18,7 +18,7 @@ object ByNameParameters {
     if(assertsEnabled && !condition()) throw new AssertionError
   }
 
-  lazy val fiveisGreaterThan3 : Boolean = {
+  lazy val fiveIsGreaterThan3 : Boolean = {
     println("evaluating condition 5 > 3")
     5 > 3
   }
@@ -35,11 +35,11 @@ object ByNameParameters {
     //The evaluation is done only once (before the method call)
     //in case the assertions are disabled (see assertsEnabled value above)
     //the condition is still evaluated
-    myAssertByValue(fiveisGreaterThan3)
+    myAssertByValue(fiveIsGreaterThan3)
 
     //the condition is evaluated only when used
     //this means it can be evaluated multiple times or never
-    myAssertByName(tenIsGreaterThan3)
+    myAssertByName(tenIsGreaterThan3) //in this case (assertsEnabled = false) the condition is never evaluated
 
     //this is the same as "by name" only that is uglier to use
     myAssertWithFunc(()=> 20 > 3)
@@ -49,6 +49,11 @@ object ByNameParameters {
     myAssertByValue((() => {
       println("evaluating 30 > 3")
       30 > 3
+    })())
+
+    myAssertByName((() => {
+      println("evaluating 31 > 3")
+      31 > 3
     })())
 
   }

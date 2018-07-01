@@ -17,7 +17,6 @@
 //    Builder, CanBuildFrom, LikeXXX
 //    BigO reference for common methods in commona implementations
 
-//value types
 
 //case classes : unapply && unapplySeq
 
