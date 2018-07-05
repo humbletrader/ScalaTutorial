@@ -80,7 +80,7 @@ case class Dog(name: String) extends Pet
 case class Cat(name: String, age: Int) extends Pet
 case class Fox() extends Pet
 
-val test = new Dog("Puffy")
+val test : Any = new Dog("Puffy")
 test match {
   case Dog("Lord") => "my dog's name is lord"
   case Dog(_) => "some kind of dog"
@@ -97,6 +97,11 @@ test match {
 List(1,2,3, 4) match {
   case List(0, _, _) => "a three-element list with 0 as the first element"
   case List(1, _*) => "a list beginning with 1, having any number of elements"
+}
+
+(1 -> "one") match {
+  case (1, str) => println("tuple starting with 1 found")
+  case (a, b) => println("generic tuple found !")
 }
 
 
