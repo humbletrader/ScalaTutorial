@@ -37,7 +37,6 @@ val partial  : PartialFunction[String, Int] = { case str => str.length}
 
 List(1,2,3).collect({case 1 => "one"}) //collect expects a partial function
 
-
 //parenthesis and curly braces
 // can be used interchangeably when passing param to method calls
 //if and only if the method expects s single parameter
@@ -54,6 +53,15 @@ val funcWithTuple2 : ((Int, String)) => String = { case (a, b) => b + a }
 val funcWithTuple3 : (Int, String) => String = { case (a: Int , b: String) => b + a.toString}
 
 List(1 -> "a", 2-> "b", 3-> "c").map{ tuple => tuple._2 + tuple._1 }
+//this is the shortcut from of
+List(1 -> "a", 2 -> "b", 3 -> "c").map({tuple => tuple._2 + tuple._1})
+//where {} is a block of code which returns a function tuple => String
+
+import Function.tupled
+
+List(1, 2, 3).zip(List ("a", "b", "c")) map tupled {(a, b) => "blah" }
+(List(1, 2, 3), List("a", "b", "c")).zipped.map((a, b) => "blah")
+
 List(1 -> "a", 2-> "b", 3-> "c").map( tuple => tuple._2 + tuple._1 )
 List(1 -> "a", 2-> "b", 3-> "c").map( funcWithTuple)
 List(1 -> "a", 2-> "b", 3-> "c").map{ case (a: Int, b: String) => b + a }
