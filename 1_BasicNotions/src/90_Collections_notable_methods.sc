@@ -11,6 +11,7 @@ List(1, 2, 3, 4, 5, 6, 7, 8, 9).partition( _ %2 == 0) //returns a tuple with two
 
 //zip
 List(1,2,3).zip(List("a", "b", "c")) // returns a list of tuples List((1,"a"), (2, "b"), (3, "c"))
+(List(1,2,3), List("a", "b", "c"), List("alpha", "beta", "gamma")).zipped.map((nbr, letter, greek) => nbr + letter + greek)
 
 //flatten
 List(List(1,2), List(3, 4, 5)).flatten // List(1,2,3,4,5)
