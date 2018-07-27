@@ -38,6 +38,9 @@ def addTwoNumbers(a: Int, b: Int) : Int = a + b
 val addSeven = addTwoNumbers(7, _:Int)
 addSeven(8)
 
+val addTwoNumbersAsValFunction = addTwoNumbers _
+
+
 //////////////////////////////////
 //CURRIED FUNCTIONS
 //////////////////////////////////

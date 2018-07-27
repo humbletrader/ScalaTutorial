@@ -1,6 +1,6 @@
 class Calculator {
   val brand = "DELL" //public by default
-  def compute(a: Int, b: Int) = a+b
+  def compute(a: Int, b: Int) = a+b //also public
 }
 
 val calc = new Calculator
@@ -16,7 +16,7 @@ class Computer (brand : String) {
   //a constructor in scala = all code outside methods
   val color = if (brand == "APPLE") "white" else "black"
 
-  //instance method ( nothing to do with the constructor)
+  //instance method (nothing to do with the constructor)
   def compute(a: Int, b: Int) = a + b
 
   //this is also part of the constructor
