@@ -35,10 +35,20 @@ thisIsAFunction.getClass
 //PARTIAL APPLICATION
 //////////////////////////////////
 def addTwoNumbers(a: Int, b: Int) : Int = a + b
-val addSeven = addTwoNumbers(7, _:Int)
+val addSeven = addTwoNumbers(7, _ : Int)
 addSeven(8)
 
 val addTwoNumbersAsValFunction = addTwoNumbers _
+
+
+//////////////////////////////////
+// REFERENCES TO FUNCTIONS
+//////////////////////////////////
+def addFive(a: Int) : Int = a + 5
+val referenceToAddFive = addFive _
+
+def addTwoNbrs(a: Int, b: Int) = a + b
+val referenceToAddNbrs = addTwoNbrs _
 
 
 //////////////////////////////////
