@@ -3,6 +3,7 @@
 
 ## Best scala books
  * Programming Scala 2nd edition by Dean Wampler and Alexy Payne
+ * Scala with Cats by Noel Welsh and Dave Gurnell (free e-book)
 
 ## Online tutorials
 
