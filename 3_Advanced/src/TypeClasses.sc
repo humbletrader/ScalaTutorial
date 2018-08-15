@@ -4,7 +4,7 @@ class Person(firstName: String, lastName: String)
 /**
   * this is the type class
   */
-trait ToJson {
+trait JSONable {
   def toJson(): String
 }
 
@@ -12,12 +12,22 @@ trait ToJson {
   * implicit class
   * @param pers
   */
-implicit class PersonToJson(pers: Person) extends ToJson{
+implicit class JSONablePerson(pers: Person) extends JSONable{
     def toJson() = "Person as json"
 }
 
+/**
+  * this is the consumer of json ... it could have been anything else
+  * @param jsonHolder
+  */
+def jsonConsumer(jsonHolder: JSONable): Unit =
+  println(
+    s""" consuming ....
+       |
+       | ${jsonHolder.toJson()}
+       |
+     """.stripMargin)
 
-def jsonConsumer(jsonHolder: ToJson) =
-  println(jsonHolder.toJson())
+jsonConsumer(new Person("Jon", "Doe"))
 
 
