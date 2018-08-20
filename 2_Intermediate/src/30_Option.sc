@@ -11,9 +11,11 @@ for{
 }
 )
 
+//some common methods
 Some("hello 1").flatMap( str => Some("enhanced "+str))
 Some("hello 2").flatMap( str => None)
 Some("hello 3").map( str => "enhanced "+str)
+Some(100).fold(0.0){value => value + 1.0} //0.0 is the default value
 
 //None is considered an empty container so flatMap returns also None
 None.flatMap( str => Some("enhanced "+str))
