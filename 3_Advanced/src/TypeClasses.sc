@@ -1,23 +1,57 @@
-class Address(street: String, nbr: Int)
-class Person(firstName: String, lastName: String)
+//requirement: we want to be able to transform to JSON
+// all our domain classes
+
+//domain classes
+case class Address(street: String, nbr: Int)
+case class Person(firstName: String, lastName: String)
+
+//i'm pretty lazy so i'll use String instead of Json
+type JSON = String
 
 /**
-  * this is the type class
+  * the type class
+  * @tparam A
   */
-trait ToJson {
-  def toJson(): String
+trait JsonWriter[A]{
+  def write(obj: A) : JSON
 }
 
-/**
-  * implicit class
-  * @param pers
-  */
-implicit class PersonToJson(pers: Person) extends ToJson{
-    def toJson() = "Person as json"
+//type class instances
+object JsonWriterInstances{
+  implicit val personWriter: JsonWriter[Person] = new JsonWriter[Person] {
+    override def write(obj: Person): JSON = s"JSON[${obj.firstName}]"
+  }
+
+  implicit val addressWriter : JsonWriter[Address] = new JsonWriter[Address] {
+    override def write(obj: Address): JSON = s"JSON[${obj.street}]"
+  }
 }
 
+////////////////////////////////////////////////////
+//           CONSUMING TYPE CLASSES
+////////////////////////////////////////////////////
 
-def jsonConsumer(jsonHolder: ToJson) =
-  println(jsonHolder.toJson())
+//option 1 : Interface Object
+object Json{
+  def toJson[A](value: A)(implicit writer: JsonWriter[A]) : JSON =
+    writer.write(value)
+}
 
+//usage
+import JsonWriterInstances._
 
+Json.toJson(Person("Jon", "Doe"))
+
+//option 2: Interface Syntax (extension methods / type enrichment / pimping )
+//the most elegant
+object JsonSyntax{
+  implicit class JsonWriterOps[A](value: A) {
+    def toJson(implicit w: JsonWriter[A]) : JSON = w.write(value)
+  }
+}
+
+import JsonWriterInstances._
+import JsonSyntax._
+
+Person("Jane", "Doe").toJson
+Address("USA, New York, Wall Street", 1).toJson

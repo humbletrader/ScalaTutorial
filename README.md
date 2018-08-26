@@ -5,6 +5,7 @@ or implemented by myself while I was learning scala
 ## Best scala books
  * Programming in Scala by Martin Odersky 
  * Programming Scala 2nd edition by Dean Wampler and Alexy Payne
+ * Scala with Cats by Noel Welsh and Dave Gurnell (free e-book)
  * Scala in depth by Josh Suereth
  * Scala with Cats
 
@@ -22,6 +23,7 @@ Sources Used in this project :
 * [Scala style guide](https://docs.scala-lang.org/style/)  
 * [Conversions between Java and Scala collections](http://docs.scala-lang.org/overviews/collections/conversions-between-java-and-scala-collections.html)
 * [Stream vs. View vs. Iterator](http://docs.scala-lang.org/tutorials/FAQ/stream-view-iterator.html)
+
 
 
 ## Todo: 

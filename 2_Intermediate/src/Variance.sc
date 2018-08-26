@@ -4,7 +4,9 @@
 //Example
 //Integer <: Number
 //Option[Integer] <: Option[Number]  (check the implementation of Option[+A]
-//
+val optionOfInt : Option[java.lang.Integer] = Option(123)
+val optionOfNumber : Option[java.lang.Number] = optionOfInt //covariance
+
 // Example:
 // bad implementation of java arrays
 // Integer <: Number -> Integer[] < Number[]
@@ -17,6 +19,13 @@
 // contra-variance:
 // if A <:B then T(B) <: T(A)
 //
+class Writer[-T] {
+  def write(value: T) = s" writing $value of type ${value.getClass}"
+}
+val nbrWriter : Writer[Number] = new Writer[Number]
+val intWriter : Writer[Integer] = nbrWriter
+
+
 //
 // invariance:
 // A <: B ->  no relation between T(A) and T(B)
