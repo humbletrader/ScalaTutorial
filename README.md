@@ -78,3 +78,5 @@ Sources Used in this project :
 * referential transparency ( see : https://pierangeloc.github.io/blog/2018/06/01/on-RT-and-FP )
 
 * path dependent types
+
+* type ascription

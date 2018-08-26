@@ -82,3 +82,14 @@ class Cat (name: String) extends Animal(name, legCount = 4) {}
 
 val myCat = new Cat("Sisi")
 println(myCat.legCount)
+
+class VariousWaysToDefineMethods{
+
+  def test1(param : String) : String = "test with equal"
+
+  def test2(param: String) { // no equal sign if the method returns Unit
+    print("blah")
+  }
+
+  def test3 : String => String = (str : String) => "function"
+}
