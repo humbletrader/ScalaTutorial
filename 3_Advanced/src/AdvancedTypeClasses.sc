@@ -1,6 +1,6 @@
 case class Person(firstName: String, age: Int)
 
-//case class
+//type class
 trait ToJson[A]{
   def objToJson(obj : A) : String
 }
