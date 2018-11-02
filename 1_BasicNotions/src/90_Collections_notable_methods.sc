@@ -61,3 +61,8 @@ Iterator( "a" -> "alan", "b" -> "bush", "a" -> "alice", "c" -> "chriss").toMap
 //toSet
 //toStream
 //toTraversable
+
+
+//exotic functions
+Map(1 -> "abc").lift(0)
+
