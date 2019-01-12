@@ -1,6 +1,5 @@
 # LearnScala
-This is a collection os scala scripts gathered from various source 
-or implemented by myself while I was learning scala
+This is a collection os scala scripts copied from various sources or implemented by myself while I was learning scala
 
 ## Best scala books
  * Programming in Scala by Martin Odersky 
