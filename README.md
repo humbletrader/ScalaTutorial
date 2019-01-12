@@ -1,5 +1,5 @@
 # LearnScala
-This is a collection os scala sources gathered from various source 
+This is a collection os scala scripts gathered from various source 
 or implemented by myself while I was learning scala
 
 ## Best scala books
