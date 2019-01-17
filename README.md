@@ -76,3 +76,5 @@ This is a collection os scala scripts copied from various sources or implemented
 * path dependent types
 
 * type ascription
+
+* TypeTag, ClassTag and WeakTypeTag (see: https://medium.com/@sinisalouc/overcoming-type-erasure-in-scala-8f2422070d20)
