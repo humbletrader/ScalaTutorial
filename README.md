@@ -6,7 +6,6 @@ This is a collection os scala scripts copied from various sources or implemented
  * Programming Scala 2nd edition by Dean Wampler and Alexy Payne
  * Scala with Cats by Noel Welsh and Dave Gurnell (free e-book)
  * Scala in depth by Josh Suereth
- * Scala with Cats
 
 ## Useful links:
 * [Twitter's Scala School](http://twitter.github.io/scala_school)
@@ -78,3 +77,5 @@ This is a collection os scala scripts copied from various sources or implemented
 * type ascription
 
 * TypeTag, ClassTag and WeakTypeTag (see: https://medium.com/@sinisalouc/overcoming-type-erasure-in-scala-8f2422070d20)
+
+* Improve variance examples (see: https://www.benjamin.pizza/posts/2019-01-11-the-fourth-type-of-variance.html)
