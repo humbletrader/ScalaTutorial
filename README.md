@@ -1,25 +1,20 @@
 # LearnScala
-This is a collection os scala sources gathered from various source 
-or implemented by myself while I was learning scala
+This is a collection os scala scripts copied from various sources or implemented by myself while I was learning scala
 
 ## Best scala books
  * Programming in Scala by Martin Odersky 
  * Programming Scala 2nd edition by Dean Wampler and Alexy Payne
  * Scala with Cats by Noel Welsh and Dave Gurnell (free e-book)
  * Scala in depth by Josh Suereth
- * Scala with Cats
 
-## Online tutorials
-
-Sources Used in this project : 
+## Useful links:
 * [Twitter's Scala School](http://twitter.github.io/scala_school)
 * [Guide to Scala Collections](http://docs.scala-lang.org/overviews/collections/introduction.html)
 * [Collections tips and tricks](https://pavelfatin.com/scala-collections-tips-and-tricks)
 * [Design Patterns](https://pavelfatin.com/design-patterns-in-scala/)
 * [Effective scala](https://youtu.be/TNSe0QzLx4E)
-
-
-## Useful links:
+* [Scala best practices by Nicolas Rinaudo](https://nrinaudo.github.io/scala-best-practices/index.html)
+* [Scala best practices by Alexandru Nedelcu](https://github.com/alexandru/scala-best-practices)
 * [Scala style guide](https://docs.scala-lang.org/style/)  
 * [Conversions between Java and Scala collections](http://docs.scala-lang.org/overviews/collections/conversions-between-java-and-scala-collections.html)
 * [Stream vs. View vs. Iterator](http://docs.scala-lang.org/tutorials/FAQ/stream-view-iterator.html)
@@ -80,3 +75,7 @@ Sources Used in this project :
 * path dependent types
 
 * type ascription
+
+* TypeTag, ClassTag and WeakTypeTag (see: https://medium.com/@sinisalouc/overcoming-type-erasure-in-scala-8f2422070d20)
+
+* Improve variance examples (see: https://www.benjamin.pizza/posts/2019-01-11-the-fourth-type-of-variance.html)
