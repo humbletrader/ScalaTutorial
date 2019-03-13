@@ -50,19 +50,13 @@ This is a collection os scala scripts copied from various sources or implemented
     - cake pattern
 
 * collections:
-    - Builder, CanBuildFrom, LikeXXX
+    - Builder, CanBuildFrom, MapLike, SeqLike
     - BigO reference for common methods in common implementations
 
 
 * case classes : unapply && unapplySeq
 
 * uniform access principle
-
-* implicit vs. implicitly
-
-* view bounds
-
-* context bounds
 
 * abstract types
 
