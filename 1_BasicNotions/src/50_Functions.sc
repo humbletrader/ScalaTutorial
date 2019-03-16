@@ -1,5 +1,5 @@
 //classic function definition
-def addOne(x: Int): Int = x +1
+def addOne(x: Int): Int = x + 1
 
 //function definition with inferred return type
 def addTwo(x: Int) = x+2
@@ -11,6 +11,14 @@ makeComputation()
 //in scala you can skip the parenthesis for
 //functions without params
 makeComputation
+
+//for functions without return value (i.e.Unit)
+// we can also use a def with no equals at the end
+// but this is a bad practice
+def fncNoReturnValue(in: Int){
+  println(in)
+  //no return
+}
 
 //this is not a function (see the ValuesAndVariables.sc)
 def thisIsNotAFunction = 2+3

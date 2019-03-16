@@ -11,7 +11,7 @@ var mutableOne : Int = 1
 //immutable value definition having the type inferred from the right hand side
 val two =  1+1
 
-//error below (re-assingnment to val)
+//error below (re-assignment to val)
 //two = 3
 
 var three = 1+2 //type inferred from right
@@ -31,8 +31,6 @@ def four = 4
 //          every time it is called (e.g. evaluation by name)
 //lazy val- immutable label for the right hand side content which is eagerly
 //          evaluated the first time it is called
-//
-
 
 //val evaluated immediately and only once
 val proofVal = {
