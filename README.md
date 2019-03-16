@@ -15,6 +15,7 @@ This is a collection os scala scripts copied from various sources or implemented
 * [Effective scala](https://youtu.be/TNSe0QzLx4E)
 
 ### Scala collections
+* [Collection guide](https://docs.scala-lang.org/overviews/collections/introduction.html)
 * [Collections tips and tricks](https://pavelfatin.com/scala-collections-tips-and-tricks)
 * [Conversions between Java and Scala collections](http://docs.scala-lang.org/overviews/collections/conversions-between-java-and-scala-collections.html)
 * [Stream vs. View vs. Iterator](http://docs.scala-lang.org/tutorials/FAQ/stream-view-iterator.html)
