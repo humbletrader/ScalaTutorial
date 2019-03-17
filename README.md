@@ -28,7 +28,8 @@ This is a collection os scala scripts copied from various sources or implemented
 * [Strategic Scala Style: Principle of least power](http://www.lihaoyi.com/post/StrategicScalaStylePrincipleofLeastPower.html)
 * [Design Patterns](https://pavelfatin.com/design-patterns-in-scala/)
 
-
+### Functional programming
+* [Typeclasses](https://blog.scalac.io/2017/04/19/typeclasses-in-scala.html)
 
 ## Todo: 
 * common code in package objects
