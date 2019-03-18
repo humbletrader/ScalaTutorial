@@ -15,6 +15,7 @@ This is a collection os scala scripts copied from various sources or implemented
 * [Effective scala](https://youtu.be/TNSe0QzLx4E)
 
 ### Scala collections
+* [Collection guide](https://docs.scala-lang.org/overviews/collections/introduction.html)
 * [Collections tips and tricks](https://pavelfatin.com/scala-collections-tips-and-tricks)
 * [Conversions between Java and Scala collections](http://docs.scala-lang.org/overviews/collections/conversions-between-java-and-scala-collections.html)
 * [Stream vs. View vs. Iterator](http://docs.scala-lang.org/tutorials/FAQ/stream-view-iterator.html)
@@ -27,7 +28,8 @@ This is a collection os scala scripts copied from various sources or implemented
 * [Strategic Scala Style: Principle of least power](http://www.lihaoyi.com/post/StrategicScalaStylePrincipleofLeastPower.html)
 * [Design Patterns](https://pavelfatin.com/design-patterns-in-scala/)
 
-
+### Functional programming
+* [Typeclasses](https://blog.scalac.io/2017/04/19/typeclasses-in-scala.html)
 
 ## Todo: 
 * common code in package objects
@@ -50,19 +52,13 @@ This is a collection os scala scripts copied from various sources or implemented
     - cake pattern
 
 * collections:
-    - Builder, CanBuildFrom, LikeXXX
+    - Builder, CanBuildFrom, MapLike, SeqLike
     - BigO reference for common methods in common implementations
 
 
 * case classes : unapply && unapplySeq
 
 * uniform access principle
-
-* implicit vs. implicitly
-
-* view bounds
-
-* context bounds
 
 * abstract types
 

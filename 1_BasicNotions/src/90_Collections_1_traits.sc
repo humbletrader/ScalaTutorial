@@ -6,7 +6,7 @@
 //           ^
 //           |
 //         Iterable    ( iterator() over the elements, hasNext, next )
-//     ^      ^      ^
+//     ---------------
 //     |      |      |
 //    Seq    Set     Map
 //
@@ -58,7 +58,7 @@ groupsOfThree.next() //List (4, 5, 6)
 groupsOfThree.next() //List(7)
 groupsOfThree.hasNext //false
 
-val slidingWindowOfThree = iterableSample.sliding(3) //returns an interator
+val slidingWindowOfThree = iterableSample.sliding(3) //returns an iterator
 slidingWindowOfThree.next() // List (1,2,3)
 slidingWindowOfThree.next() // List(2, 3, 4)
 // ..
@@ -99,7 +99,7 @@ sequence.reverse
 // Array, ArrayBuffer, Vector: implementation for IndexedSeq
 
 //Seq implements PartialFunction[Int, A] so you can easily write
-sequence(3)
+sequence(3) // returns 5
 //sequence(100) //IndexOutOfBounds
 
 
