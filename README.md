@@ -85,3 +85,5 @@ This is a collection os scala scripts copied from various sources or implemented
 * Improve variance examples (see: https://www.benjamin.pizza/posts/2019-01-11-the-fourth-type-of-variance.html)
 
 * F bounded types (see : http://tpolecat.github.io/2015/04/29/f-bounds.html )
+
+* Other type bounds ( see : https://twitter.github.io/scala_school/advanced-types.html )
