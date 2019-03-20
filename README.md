@@ -87,3 +87,6 @@ This is a collection os scala scripts copied from various sources or implemented
 * F bounded types (see : http://tpolecat.github.io/2015/04/29/f-bounds.html )
 
 * Other type bounds ( see : https://twitter.github.io/scala_school/advanced-types.html )
+
+* improve partial functions ( see : https://blog.bruchez.name/2011/10/scala-partial-functions-without-phd.html )
+
