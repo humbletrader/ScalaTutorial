@@ -28,7 +28,8 @@ This is a collection os scala scripts copied from various sources or implemented
 * [Strategic Scala Style: Principle of least power](http://www.lihaoyi.com/post/StrategicScalaStylePrincipleofLeastPower.html)
 * [Design Patterns](https://pavelfatin.com/design-patterns-in-scala/)
 
-
+### Functional programming
+* [Typeclasses](https://blog.scalac.io/2017/04/19/typeclasses-in-scala.html)
 
 ## Todo: 
 * common code in package objects
@@ -82,3 +83,10 @@ This is a collection os scala scripts copied from various sources or implemented
 * TypeTag, ClassTag and WeakTypeTag (see: https://medium.com/@sinisalouc/overcoming-type-erasure-in-scala-8f2422070d20)
 
 * Improve variance examples (see: https://www.benjamin.pizza/posts/2019-01-11-the-fourth-type-of-variance.html)
+
+* F bounded types (see : http://tpolecat.github.io/2015/04/29/f-bounds.html )
+
+* Other type bounds ( see : https://twitter.github.io/scala_school/advanced-types.html )
+
+* improve partial functions ( see : https://blog.bruchez.name/2011/10/scala-partial-functions-without-phd.html )
+

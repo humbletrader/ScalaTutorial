@@ -44,9 +44,11 @@ val anyVal: AnyVal = 1
 
 //the type hierarchy in scala :
 //                    Any
-//        AnyVal                          AnyRef
-//   Byte Short Int Long Double Float
-//
+//          |-----------|-----------------------------|
+//        AnyVal                                    AnyRef (the closest to java Object)
+//    ---------------------------
+//    |    |    |   |     |     |
+//  Byte Short Int Long Double Float
 //
 
 
