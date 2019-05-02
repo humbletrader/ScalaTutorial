@@ -1,5 +1,7 @@
 # LearnScala
-This is a collection os scala scripts copied from various sources or implemented by myself while I was learning scala
+This is a collection of : 
+ * scala scripts copied from various sources or implemented by myself while I was learning scala
+ * links to various projects, tutorials, plugins
 
 ## Best scala books
  * Programming in Scala by Martin Odersky 
@@ -34,6 +36,9 @@ This is a collection os scala scripts copied from various sources or implemented
 ### Scala exercises
 * [Scala exercises for std lib, cats, doobie, fp in scala](https://www.scala-exercises.org/) maintained by Underscore.io 
 * [99 problems in scala](http://aperiodic.net/phil/scala/s-99/)
+
+### Plugins
+* [scalastyle](http://www.scalastyle.org/) - the equivalent of checkstyle for scala (eclipse, intellij, maven, gradle)
 
 
 ## Todo: 
