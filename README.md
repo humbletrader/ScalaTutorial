@@ -31,6 +31,11 @@ This is a collection os scala scripts copied from various sources or implemented
 ### Functional programming
 * [Typeclasses](https://blog.scalac.io/2017/04/19/typeclasses-in-scala.html)
 
+### Scala exercises
+* [Scala exercises for std lib, cats, doobie, fp in scala](https://www.scala-exercises.org/) maintained by Underscore.io 
+* [99 problems in scala](http://aperiodic.net/phil/scala/s-99/)
+
+
 ## Todo: 
 * common code in package objects
 
