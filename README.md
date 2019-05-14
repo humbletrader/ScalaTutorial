@@ -12,9 +12,9 @@ This is a collection of :
 ## Useful links:
 
 ### Scala tutorials
-* [Twitter's Scala School](http://twitter.github.io/scala_school)
 * [Guide to Scala Collections](http://docs.scala-lang.org/overviews/collections/introduction.html)
 * [Effective scala](https://youtu.be/TNSe0QzLx4E)
+* [Variance](https://youtu.be/3tOMW2DkeS8)
 
 ### Scala collections
 * [Collection guide](https://docs.scala-lang.org/overviews/collections/introduction.html)
@@ -55,7 +55,7 @@ This is a collection of :
     - why immutable -> covariant and mutable -> invariant
     - type bounds vs. variance ( they're unrelated issues)
 
-* patterns : 
+* patterns: 
     - stackable traits, 
     - type class, 
     - evidence class, 
@@ -64,7 +64,6 @@ This is a collection of :
 * collections:
     - Builder, CanBuildFrom, MapLike, SeqLike
     - BigO reference for common methods in common implementations
-
 
 * case classes : unapply && unapplySeq
 
