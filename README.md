@@ -15,6 +15,7 @@ This is a collection of :
 * [Guide to Scala Collections](http://docs.scala-lang.org/overviews/collections/introduction.html)
 * [Effective scala](https://youtu.be/TNSe0QzLx4E)
 * [Variance](https://youtu.be/3tOMW2DkeS8)
+* [Scala cheatsheet as jupyter notebook](https://riiswa.github.io/Scala-CheatSheet/)
 
 ### Scala collections
 * [Collection guide](https://docs.scala-lang.org/overviews/collections/introduction.html)
