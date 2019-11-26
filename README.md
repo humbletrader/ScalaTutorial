@@ -27,7 +27,8 @@ This is a collection of :
 ### Best practices and style guides
 * [Scala best practices by Nicolas Rinaudo](https://nrinaudo.github.io/scala-best-practices/index.html)
 * [Scala best practices by Alexandru Nedelcu](https://github.com/alexandru/scala-best-practices)
-* [Scala style guide](https://docs.scala-lang.org/style/)  
+* [Scala style guide at scala.com](https://docs.scala-lang.org/style/)  
+* [Scala style guide at databrics](https://github.com/databricks/scala-style-guide)
 * [Strategic Scala Style: Principle of least power](http://www.lihaoyi.com/post/StrategicScalaStylePrincipleofLeastPower.html)
 * [Design Patterns](https://pavelfatin.com/design-patterns-in-scala/)
 
