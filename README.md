@@ -35,9 +35,10 @@ This is a collection of :
 ### Functional programming
 * [Typeclasses](https://blog.scalac.io/2017/04/19/typeclasses-in-scala.html)
 
-### Scala exercises
+### Scala exercises / solutions
 * [Scala exercises for std lib, cats, doobie, fp in scala](https://www.scala-exercises.org/) maintained by Underscore.io 
 * [99 problems in scala](http://aperiodic.net/phil/scala/s-99/)
+* [LiHaoyi's handson scala](https://github.com/handsonscala/examples)
 
 ### Plugins
 * [scalastyle](http://www.scalastyle.org/) - the equivalent of checkstyle for scala (eclipse, intellij, maven, gradle)
