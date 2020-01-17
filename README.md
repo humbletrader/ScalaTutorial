@@ -33,6 +33,7 @@ This is a collection of :
 * [Design Patterns](https://pavelfatin.com/design-patterns-in-scala/)
 
 ### Functional programming
+* [Functional Programming](https://medium.com/walmartlabs/demystifying-functional-programming-part-1-eb4347d145d0)
 * [Typeclasses](https://blog.scalac.io/2017/04/19/typeclasses-in-scala.html)
 
 ### Scala exercises / solutions
