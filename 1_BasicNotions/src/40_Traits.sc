@@ -38,7 +38,8 @@ trait TraitWithAllMethodsImplemented {
 class SimpleClass(var name: String) // it does not extend the trait
 
 //it extends the trait at "instantiation time"
-val onTheFlyTraitExtend = new SimpleClass("Dragos") with TraitWithAllMethodsImplemented
+val onTheFlyTraitExtend = new SimpleClass("blah") with TraitWithAllMethodsImplemented
+onTheFlyTraitExtend.speak()
 
 ///////////////////////////////////////////////////////////
 //Limiting Which Classes Can Use a Trait by Inheritance
@@ -68,12 +69,12 @@ trait FlightCapable {
 ////////////////////////////////////////////////////////
 
 trait FlightCapable2 {
-  this: { def fly():Unit } => { //more code here
+  this: { def fly() : Unit } => { //more code here
   }
 }
 
 class FlyingSaucer2 extends FlightCapable2 {
-  def fly():Unit = { // remove this and you will get a compilation error
+  def fly() : Unit = { // remove this and you will get a compilation error
     println("I'm flying ... ")
   }
 }
