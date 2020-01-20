@@ -1,4 +1,4 @@
-# LearnScala
+# Scala Tutorial
 This is a collection of : 
  * scala scripts copied from various sources or implemented by myself while I was learning scala
  * links to various projects, tutorials, plugins

@@ -8,12 +8,10 @@ addTwo(7)
 //classic no params function definition
 def makeComputation(): Int = 1+2
 makeComputation()
-//in scala you can skip the parenthesis for
-//functions without params
+//in scala you can skip the parenthesis for functions without params
 makeComputation
 
-//for functions without return value (i.e.Unit)
-// we can also use a def with no equals at the end
+//for functions without return value (i.e.Unit) we can also use a def with no equals at the end
 // but this is a bad practice
 def fncNoReturnValue(in: Int){
   println(in)
@@ -57,6 +55,12 @@ val referenceToAddFive = addFive _
 
 def addTwoNbrs(a: Int, b: Int) = a + b
 val referenceToAddNbrs = addTwoNbrs _
+
+//function composition
+val f = (i: Int) => i.toString
+val g = (s: String) => s.toCharArray
+val fog = f andThen g //infix notation used for readability
+println(fog(10))
 
 
 //////////////////////////////////
