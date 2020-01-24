@@ -1,13 +1,11 @@
-//in scala the default (aka missing modifier) is public
-
-package blah{
+package blah {
   class C {
-    def foo = println("called foo ") //this hs public access
+    def foo(): Unit = println("called foo ") //this hs public access
   }
-  val c = new C
-  c.foo //public
-}
 
+  val c = new C
+  c.foo () //because foo is public
+}
 
 ///////////////////////////////////////////////////////////////
 //                  special access modifiers                 //
