@@ -62,7 +62,6 @@ val g = (s: String) => s.toCharArray
 val fog = f andThen g //infix notation used for readability
 println(fog(10))
 
-
 //////////////////////////////////
 //CURRIED FUNCTIONS
 //////////////////////////////////

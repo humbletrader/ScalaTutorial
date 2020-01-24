@@ -4,14 +4,15 @@ This is a collection of :
  * links to various projects, tutorials, plugins
 
 ## Best scala books
- * Programming in Scala by Martin Odersky 
  * Programming Scala 2nd edition by Dean Wampler and Alexy Payne
+ * Programming in Scala by Martin Odersky 
  * Scala with Cats by Noel Welsh and Dave Gurnell (free e-book)
  * Scala in depth by Josh Suereth
 
 ## Useful links:
 
 ### Scala tutorials
+* [Access Modifiers in Scala](https://jesperdj.com/2016/01/08/scala-access-modifiers-and-qualifiers-in-detail/)
 * [Guide to Scala Collections](http://docs.scala-lang.org/overviews/collections/introduction.html)
 * [Effective scala](https://youtu.be/TNSe0QzLx4E)
 * [Variance](https://youtu.be/3tOMW2DkeS8)
