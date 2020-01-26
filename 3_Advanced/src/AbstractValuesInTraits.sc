@@ -9,9 +9,13 @@ trait Property{
 }
 
 val x = new Property{ override val name = "Hi"} //Property(null)
+//because the linearization of x is :
+// Anonymous > Property > AnyRef > Any
+// when constructing the new Property is done first and new Anon() is second
+x.toString
 
 
-//solution : don't use abstract vals in traits
+//solution 1: don't use abstract vals in traits
 //solution 2:
 
 class X extends {val name = "Hi"} with Property //Property(Hi)
@@ -29,4 +33,30 @@ trait PropertyWithLazyToString{
 
 val y = new PropertyWithLazyToString {
   override val name: String = "Blah"
+}
+
+//read more here:
+//https://docs.scala-lang.org/tutorials/FAQ/initialization-order.html
+
+abstract class A {
+  val x1: String
+  val x2: String = "mom"
+
+  println("A: " + x1 + ", " + x2)
+}
+class B extends A {
+  val x1: String = "hello"
+
+  println("B: " + x1 + ", " + x2)
+}
+class C extends B {
+  override val x2: String = "dad"
+
+  println("C: " + x1 + ", " + x2)
+}
+
+new C
+new A{
+  val x1 : String = "blah"
+  println("Anon: "+x1 + ", "+x2)
 }
