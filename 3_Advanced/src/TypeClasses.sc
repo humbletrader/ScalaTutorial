@@ -35,7 +35,12 @@ object JsonWriterInstances{
 object Json{
   def toJson[A](value: A)(implicit writer: JsonWriter[A]) : JSON =
     writer.write(value)
+
+  def fancierToJson[A:JsonWriter](value : A) : JSON =
+    implicitly[JsonWriter[A]].write(value)
 }
+
+
 
 //usage
 import JsonWriterInstances._

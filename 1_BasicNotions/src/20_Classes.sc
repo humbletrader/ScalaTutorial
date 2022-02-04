@@ -60,7 +60,7 @@ fourthTypeOfComputer.brand
 class Person(firstName: String, lastName: String){
 
   //this is an auxiliary constructor
-  def this(firstName: String) {
+  def this(firstName: String) = {
     this(firstName, "Unknown")
   }
 }
@@ -92,7 +92,7 @@ class VariousWaysToDefineMethods{
   //the common case
   def test1(param : String) : String = "test with equal"
 
-  def test2(param: String) { // no equal sign if the method returns Unit
+  def test2(param: String) = { // no equal sign if the method returns Unit
     print("blah")
   }
 

@@ -39,11 +39,11 @@ def requiredImplicitMoreVerbose[T](a: T, b: T)(implicit ev: T => MySpecialString
 // Basically, this pattern implements an alternative to inheritance by making functionality available
 // through a sort of implicit adapter pattern.
 
-def contextBounds[T : Ordered](a: T) = {
+def contextBounds[T : Ordered](a: T): Unit = {
   println(a.toString)
 }
 
 //this is equivalent to
-def moreVerbose[T](a: T)(implicit ev : Ordered[T]) = {
+def moreVerbose[T](a: T)(implicit ev : Ordered[T]): Unit = {
   println(a.toString)
 }

@@ -1,5 +1,7 @@
 *.class
 *.log
 *.iml
-/.idea/
-/target/
+.idea/
+target/
+out/
+project/

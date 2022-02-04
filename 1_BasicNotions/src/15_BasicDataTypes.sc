@@ -27,7 +27,7 @@ val nullValue : Null = null //null or empty reference
 //  There exist no instances of this type.
 //One other use of Nothing is as a return type for methods that never return.
 //It makes sense if you think about it. If a method’s return type is Nothing, and there exists absolutely no instance of Nothing, then such a method must never return.
-val notin : Nothing  // this one cannot be instatiated
+//val notin : Nothing   // this one cannot be instatiated
 //notin.isInstanceOf[String] // should have been true (if an instance could have been created)
 
 //While Nothing is a subtype of everything, it does not inherit
