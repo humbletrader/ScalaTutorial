@@ -13,6 +13,7 @@ class Currency(val amount: Float) extends AnyVal {
 class PhoneNumber(val s: String) extends AnyVal {
   def digits : String = s.replaceAll("""\D""", "")
 }
+
 //Because the JVM does not support value classes, Scala sometimes needs to actually instantiate a value class
 //A value class is actually instantiated when :
 //    1. a value class is treated as another type.

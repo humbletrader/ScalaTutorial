@@ -24,7 +24,7 @@ factorial(5)
 def tailFact(count: Int, accumulator: Int ) : Int = {
   // START
   if ( count == 1) accumulator
-  else tailFact(count-1, count * accumulator) //when this returns a goto START will be executed with the new parameeters
+  else tailFact(count-1, count * accumulator) //when this returns a goto START will be executed with the new parameters
 }
 
 tailFact(5, 1)
