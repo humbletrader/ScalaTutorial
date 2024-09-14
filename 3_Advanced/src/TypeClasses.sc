@@ -40,15 +40,16 @@ object Json{
     implicitly[JsonWriter[A]].write(value)
 }
 
-
-
 //usage
 import JsonWriterInstances._
 
 Json.toJson(Person("Jon", "Doe"))
 
+
+//////////////////////////////////////////////////////////////////////////////
 //option 2: Interface Syntax (extension methods / type enrichment / pimping )
 //the most elegant
+/////////////////////////////////////////////////////////////////////////////
 object JsonSyntax{
   implicit class JsonWriterOps[A](value: A) {
     def toJson(implicit w: JsonWriter[A]) : JSON = w.write(value)

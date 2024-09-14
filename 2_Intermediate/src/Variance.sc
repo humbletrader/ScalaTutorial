@@ -21,7 +21,7 @@ val optionOfNumber : Option[java.lang.Number] = optionOfInt //covariance
 // contra-variance:
 // if A <:B then T(B) <: T(A)
 //
-class Writer[-T] {
+class Writer[-T] {  //maybe a better naming should be ConsumerOf ( for sure is better as a general rule)
   def write(value: T) = s" writing $value of type ${value.getClass}"
 }
 val nbrWriter : Writer[Number] = new Writer[Number]

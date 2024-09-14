@@ -24,10 +24,15 @@ class AccessModifiersTest extends App {
 package parent {
 
   class InsideParent(){
-    private def fullPrivate() : Unit = println("accessing full private method of a class defined in foo package")
-    private[parent] def parentPrivate() : Unit = println("accessing private[foo] method of a class defined in foo package")
+    private def fullPrivate() : Unit =
+      println("accessing full private method of a class defined in foo package")
 
-    protected def fullProtected() : Unit = println("access full protected method defined in package foo")
+    private[parent] def parentPrivate() : Unit =
+      println("accessing private[foo] method of a class defined in foo package")
+
+    protected def fullProtected() : Unit =
+      println("access full protected method defined in package foo")
+
     protected[parent] def parentProtected() : Unit = ???
   }
 
@@ -57,7 +62,7 @@ package parent {
     }
 
   }
-}
+} //end parent package
 
 package blah {
 

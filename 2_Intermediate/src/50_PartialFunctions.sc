@@ -1,12 +1,12 @@
 // A partial function is a subclass of Function1
 // it only covers partially the domain of objects
+
 val partialFunction = new PartialFunction[Int, String]{
   def apply(i: Int): String = {
     return "one"
   }
   override def isDefinedAt(x: Int): Boolean = x == 1
 }
-
 
 //scala provides a shorthand for partial functions:  ( using case )
 val one: PartialFunction[Int, String] = { case 1 => "one"}
@@ -46,4 +46,4 @@ Seq(1,2,100) collect Seq("cat", "dog", "frog") //List(dog, frog)
 val partialFnc : PartialFunction[Int, String] = Map(1 -> "one", 2 -> "two", 3 -> "three")
 val totalFunction = partialFnc.lift
 totalFunction(10) //None
-totalFunction(2) //two
+totalFunction(2) //Some(two)

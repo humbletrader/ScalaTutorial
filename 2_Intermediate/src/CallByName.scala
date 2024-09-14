@@ -46,10 +46,14 @@ object CallByName {
 
     //just for fun
     //we pass a function application to myAssert methods
-    myAssertByValue((() => {
-      println("evaluating 30 > 3")
-      30 > 3
-    })())
+    myAssertByValue(
+      (
+        () => {
+          println("evaluating 30 > 3")
+          30 > 3
+        }
+        )() //this is the application of a function (with no parameters
+    )
 
     myAssertByName((() => {
       println("evaluating 31 > 3")
