@@ -27,7 +27,7 @@ Vector(1, 2, 3).flatMap(i =>
       (i, j, k)
     )))
 
-//so if the for-yield is used on a single collection then it is the equivalend of
+//so if the for-yield is used on a single collection then it is the equivalent of
 //a simple map operation
 val names = Seq("John", "Jane", "Oliver")
 
